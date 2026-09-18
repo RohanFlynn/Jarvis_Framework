@@ -14,7 +14,7 @@ def get_response(message):
     global chatlog
     chatlog.append(f"user: {message}")
     response = ollama.chat(
-        model="gemma3:4b-cloud",
+        model="gpt-oss:20b-cloud",
         messages=[
             {
                 "role": "user",

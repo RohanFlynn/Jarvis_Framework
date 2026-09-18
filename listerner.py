@@ -21,9 +21,8 @@ def Listen():
                 engine.say("Yes?")
                 engine.runAndWait()
                 with sr.Microphone() as source:
-                    rec.adjust_for_ambient_noise(source)
                     try:
-                        audio2 = rec.listen(source)
+                        audio2 = rec.listen(source, timeout=10, phrase_time_limit=10)
                         text2 = str(rec.recognize_google(audio2)).lower()
                         print(text2)
                         if not ai:
