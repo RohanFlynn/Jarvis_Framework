@@ -7,7 +7,7 @@ from listerner import Listen, mode
 import threading
 
 root = tk.CTk()
-
+root.iconbitmap(r"static\icon.ico")
 root.geometry("400x400")
 root.config(bg="#2045A8")
 
