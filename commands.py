@@ -1,6 +1,9 @@
 import webbrowser
 import pyautogui
 import win32gui
+from PIL import ImageGrab
+from VE import V_engine
+
 ops = {
     "browser": [webbrowser.open, "https://", None], 
     "spotify": [webbrowser.open, "https://open.spotify.com", None],
@@ -34,3 +37,9 @@ class commands():
         if window.isMinimized:
             window.restore()
         window.activate() 
+    def reviewimage():
+        from listerner import Inquiry
+        img = ImageGrab.grab()
+        img.save(r"temp\img.png")
+        Inquiry()
+        

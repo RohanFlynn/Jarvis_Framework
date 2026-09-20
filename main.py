@@ -15,6 +15,7 @@ root.config(bg="#2045A8")
 on = False
 listener_thread = None
 ai = False
+
 def l_check():
     while on:
         Listen()
